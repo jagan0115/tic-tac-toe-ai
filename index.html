@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>AI Tic Tac Toe 🤖</h1>
+
+<!-- HOME SCREEN -->
+<div id="homeScreen">
+    <h2>Select Mode</h2>
+    <button onclick="startGame('ai')">Play vs AI</button>
+    <button onclick="startGame('human')">2 Player Mode</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="gameScreen" style="display:none;">
+
+    <!-- AI SETTINGS -->
+    <div id="aiSettings">
+        <label>Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <label>First Move:</label>
+        <select id="firstMove">
+            <option value="player">Player</option>
+            <option value="ai">AI</option>
+        </select>
+    </div>
+
+    <!-- STATUS -->
+    <h2 id="status">Player X Turn</h2>
+
+    <!-- GAME BOARD -->
+    <div class="board" id="board"></div>
+
+    <!-- BUTTONS -->
+    <button onclick="restartGame()">Restart</button>
+    <button onclick="goHome()">Back</button>
+</div>
+
+<!-- WINNER POPUP -->
+<div id="winnerPopup" class="popup">
+    <div class="popup-content">
+        <h2 id="winnerText"></h2>
+        <button onclick="restartGame()">Play Again</button>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

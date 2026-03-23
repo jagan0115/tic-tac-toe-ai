@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+
+    /* Center everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Title */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Bigger Card */
+#homeScreen {
+    padding: 60px;
+    width: 500px;   /* increased size */
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Subtitle */
+#homeScreen h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Bigger Buttons */
+#homeScreen button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+#homeScreen button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 20px #00c6ff;
+}
+
+/* Game Screen */
+#gameScreen {
+    margin-top: 20px;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    gap: 15px;
+    justify-content: center;
+    margin: 30px;
+}
+
+/* Cells */
+.cell {
+    width: 130px;
+    height: 130px;
+    font-size: 45px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Cell Hover */
+.cell:hover {
+    transform: scale(1.1);
+    background: #e0e0e0;
+}
+
+/* Status */
+#status {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #00c6ff;
+    margin: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Popup Background */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Box */
+.popup-content {
+    background: white;
+    color: black;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    animation: scaleUp 0.3s ease;
+}
+
+/* Animation */
+@keyframes scaleUp {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+/* Winner Text */
+.popup-content h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Buttons inside popup */
+.popup-content button {
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #00c6ff;
+    color: black;
+}
